@@ -1,16 +1,16 @@
 <?php
-
 $servername = "localhost";
 $username = "root";
 $password = "";
+$dbname = "vakantiehuisjes";
 
-// connection
-$conn = new mysqli($servername, $username, $password);
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-// check connection
-if ($conn->connect_error) {
-    echo "Connected successfully";
-    die("Connection failed: " . $conn->connect_error);
-}
+// Check connection
 
+// if (!$conn) {
+//     die("Connection failed: " . mysqli_connect_error());
+// }
+// echo "Connected successfully";
 ?>
